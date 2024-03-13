@@ -14,8 +14,8 @@ export default function Home() {
                                               </Link>
 
                                             <div className={styles.header_btns}>
-                                                               <Link href={'/login'}>Login</Link>
-                                                     <Link href={'/create-account'}>Sign Up</Link>
+                                                               <Link href={'/auth/login'}>Login</Link>
+                                                     <Link href={'/auth/signup'}>Sign Up</Link>
                                             </div>
                                     </div>
                           </div>    
@@ -26,10 +26,14 @@ export default function Home() {
                                                   <div className={styles.hero_texts}>
                                                            <h1 className={dm_sans.className}>Fostering <span>Growth</span> Through Unity & <span>Partnerships</span>.</h1>
                                                            <p>Welcome to 15Green Ventures, where we combine expertise of like-minded individuals to venture into ideas aimed at growing and diversing members&apos; financial portfolio.</p>
-                                                           <Link href="/create-account">Get Started</Link>
+                                                           <Link href="/auth/signup">Get Started</Link>
                                                   </div>
                                      </div>
                          </div>
+              </div>
+
+              <div className={styles.copyright_section}>
+                       <p>Copyright &copy; { new Date().getFullYear()} All rights reserved. Powered by <Link target="_blank"  href={'https://pazalab.com'}>Pazalab</Link></p>
               </div>
     </main>
   );

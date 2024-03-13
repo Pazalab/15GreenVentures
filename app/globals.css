@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
      margin: 0;
      padding: 0;
@@ -32,6 +34,157 @@ img{
 }
 
 
+/* Chrome, safari */
+*::-webkit-scrollbar {
+	width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+     background-color: var(--main-color);
+     border-radius:10px ;
+     -webkit-border-radius:10px ;
+     -moz-border-radius:10px ;
+     -ms-border-radius:10px ;
+     -o-border-radius:10px ;
+}
+
+/* Firefox */
+.selector {
+		scrollbar-width: none;
+}
+
+.logo{
+     position: relative;
+     width: 130px;
+     height: 80px;
+     display: flex;
+}
+
+
+.form-row{
+     margin-bottom: 25px;
+}
+.form-row label{
+      font-size: 16px;
+      margin-bottom: 5px;
+      display: block;
+}
+.form-row .form-control{
+      width: 100%;
+      height: 55px;
+      font-family: "Albert Sans", sans-serif;
+      padding-left: 10px;
+      outline: none;
+      border: 1px solid rgb(214, 231, 225);
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      font-size: 16px;
+}
+.form-control::placeholder,
+.form-control-password::placeholder{
+       color: rgb(169, 169, 169);
+       font-weight: 400;
+       font-size: 15px;
+}
+.password-input{
+      height: 55px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      border: 1px solid rgb(214, 231, 225);
+}
+.form-control-password{
+       width: 100%;
+       outline: none;
+       height: 100%;
+       border: none;
+       padding-left: 10px;
+       background: transparent;
+       font-family: "Albert Sans", sans-serif;
+       font-weight: 400;
+}
+.password-input .eye-switch{
+      width: 55px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+}
+.eye-switch span{
+      font-size: 22px;
+      display: flex;
+}
+
+.form-btn button{
+      width: 100%;
+      height: 55px;
+      border: none;
+      background-color: var(--main-color);
+      font-family: "Albert Sans", sans-serif;
+      color: white;
+      font-weight: 500;
+      font-size:16px;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      cursor: pointer;
+}
+.form-btn button:hover{
+       background:rgba(7, 192, 106, 0.993);
+}
+
+.extra-form-content{
+      width: 80%;
+      margin: auto;
+      margin-bottom: 50px;
+}
+/* .extra-form-content span.line{
+      width: 100%;
+      height: 0.5px;
+      background-color: gainsboro;
+      display: flex;
+      margin: 20px 0;
+} */
+.extra-form-content .extra-btn{
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       justify-content: center;
+       border: 1px solid rgb(214, 231, 225);
+       padding: 15px;
+       border-radius: 6px;
+       -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+       -ms-border-radius: 6px;
+       -o-border-radius: 6px;
+       cursor: pointer;
+}
+.extra-form-content .extra-btn span{
+     display: flex;
+}
+.extra-form-content .extra-btn p{
+       font-size: 15px;
+}
+.extra-form-content p.redirect{
+       text-align: center;
+       margin: 20px 0;
+}
+
+.extra-form-content p.redirect a{
+      color: var(--main-color);
+      font-weight: 500;
+}
 
 
 
@@ -44,4 +197,14 @@ img{
       .inner-row{
            width: 90%;
       }
+}
+@media(max-width: 1000px){
+        .extra-form-content{
+              width: 500px;
+        }
+}
+@media(max-width: 768px){
+        .extra-form-content{
+             width: 90%;
+        }
 }
