@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { dm_sans } from "@/app/layout"
 import { FcGoogle } from "react-icons/fc";
-import LoginForm from "./LoginForm";
+import LoginForm from "../../../components/auth/LoginForm";
 
 const Login = () => {
   return (
@@ -22,10 +22,10 @@ const Login = () => {
                                   </div>
                                    <div className="extra-form-content">
                                               <span className="line"></span>
-                                              <div className="extra-btn">
+                                              <Link href='/api/auth/signin' className="extra-btn" >
                                                          <span><FcGoogle /></span>
                                                          <p>Continue with Google</p>
-                                              </div>
+                                              </Link>
 
                                               <p className="redirect">Don&apos;t  have an account? <Link href={'/auth/signup'}>Sign Up</Link></p>
                                    </div>

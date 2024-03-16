@@ -2,7 +2,7 @@ import styles from "./page.module.css"
 import Link from "next/link"
 import Image from "next/image"
 import { dm_sans } from "@/app/layout"
-import Form from "./Form"
+import SignupForm from "../../../components/auth/SignupForm"
 import { FcGoogle } from "react-icons/fc";
 const Signup = () => {
   return (
@@ -17,7 +17,7 @@ const Signup = () => {
                                              <h2 className={dm_sans.className}>Create an Account</h2>
                                              <p>Join hands with others to insure your future.</p>
 
-                                              <Form />
+                                              <SignupForm />
                                   </div>
                                    <div className="extra-form-content">
                                               <span className="line"></span>

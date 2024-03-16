@@ -188,9 +188,31 @@ img{
 
 
 
+.error{
+      color: red;
+      font-size: 13px;;
+}
+.error-msg{
+       width: 100%;
+       background: rgba(253, 98, 98, 0.955);
+       margin: 10px 0;
+       height: 40px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       border-radius:6px;
+       -moz-border-radius:6px;
+       -ms-border-radius:6px;
+       -o-border-radius:6px;
+       -webkit-border-radius:6px;
+       font-size: 15px;
+       color: white;
+       gap: 5px;
 
-
-
+}
+.error-msg span{
+      display: flex;
+}
 
 
 @media(max-width: 1250px){
