@@ -138,7 +138,11 @@ img{
       -moz-border-radius: 6px;
       -ms-border-radius: 6px;
       -o-border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;;
       cursor: pointer;
+      justify-content: center;
 }
 .form-btn button:hover{
        background:rgba(7, 192, 106, 0.993);
@@ -194,7 +198,7 @@ img{
 }
 .error-msg{
        width: 100%;
-       background: rgba(253, 98, 98, 0.955);
+       background: rgba(255, 221, 221, 0.847);
        margin: 10px 0;
        height: 40px;
        display: flex;
@@ -206,14 +210,50 @@ img{
        -o-border-radius:6px;
        -webkit-border-radius:6px;
        font-size: 15px;
-       color: white;
+       color:black;
        gap: 5px;
 
 }
+.success-msg{
+      width: 100%;
+      background: rgba(221, 255, 232, 0.847);
+      margin: 10px 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius:6px;
+      -moz-border-radius:6px;
+      -ms-border-radius:6px;
+      -o-border-radius:6px;
+      -webkit-border-radius:6px;
+      font-size: 15px;
+      color:black;
+      gap: 5px;
+}
+.success-msg span,
 .error-msg span{
       display: flex;
 }
-
+.loader {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      border-top: 3px solid #FFF;
+      border-right: 3px solid transparent;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+    }
+    
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    } 
 
 @media(max-width: 1250px){
       .inner-row{

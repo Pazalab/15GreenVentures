@@ -3,17 +3,31 @@ import { useState } from "react"
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { CgDanger } from "react-icons/cg";
 import { useForm } from "react-hook-form";
+import { registerUser } from "@/actions/register";
+import toast, { Toaster } from "react-hot-toast"
+import { useTransition } from "react";
+import Loader from "../Loader";
 const SignupForm = () => {
     const [eyeSwitch, setEyeSwitch] = useState(false);
     const [eyeSwitch2, setEyeSwitch2] = useState(false);
-    const [error,  setError] = useState('error message here')
     const { register, handleSubmit, formState: { errors}, reset, watch} = useForm();
+    const [isPending, startTransition ] = useTransition();
 
     const createUser = async (data) => {
-           console.log(data);
+          startTransition(() => {
+              registerUser(data).then(res => {
+                     if(res.error){
+                            toast.error(res.error);
+                     }
+                     if(res.success){
+                           toast.success(res.success)
+                     }
+             })
+          })
     }
   return (
     <>
+         <Toaster />
           <form onSubmit={handleSubmit(createUser)}>
                     <div className="form-row">
                               <label htmlFor="name">Full Name</label>
@@ -54,14 +68,9 @@ const SignupForm = () => {
                     </div>
 
                     <div className="form-btn">
-                              <button type="submit">Create Account</button>
+                              <button type="submit">Create Account{isPending ? <Loader /> : "" }</button>
                     </div>
-                    { error !== '' ? 
-                       <div className="error-msg">
-                               <span><CgDanger /></span>{error}
-                         </div>
-                     : ''
-                   }
+                  
              </form>
     </>
   )

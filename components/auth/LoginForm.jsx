@@ -1,22 +1,30 @@
 "use client"
-import { useState } from "react"
+import { useState, useTransition } from "react"
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useForm } from "react-hook-form";
 import { loginUser } from "@/actions/login";
-import { CgDanger } from "react-icons/cg";
+import toast, { Toaster } from "react-hot-toast";
+import Loader from "../Loader";
 const LoginForm = () => {
     const [eyeSwitch, setEyeSwitch] = useState(false);
-    const [error,  setError] = useState('error message here')
     const { register, handleSubmit, formState: { errors}, reset} = useForm();
+    const [ isPending, startTransition ] = useTransition();
 
     const login= async(data) => {
-           loginUser(data)
-               .then(res => {
-                          setError(res.error);
-               });
+           startTransition(() => {
+                  loginUser(data).then(res => {
+                          if(res.error){
+                                  toast.error(res.error, { id: 'login-error'});
+                          }
+                          if(res.success){
+                                 toast.error(res.success, { id: 'login-message'});
+                          }
+                  })
+           })
     }
   return (
     <>
+          <Toaster />
             <form onSubmit={handleSubmit(login)}>
                     <div className="form-row">
                                <label htmlFor="email">Email</label>
@@ -34,15 +42,9 @@ const LoginForm = () => {
                             <span className="error">{errors.password && errors.password.message}</span>                                      
                     </div>
                     <div className="form-btn">
-                              <button type="submit">Login</button>
+                              <button type="submit">Login{isPending ? <Loader /> : "" }</button>
                     </div>
             </form>
-            { error !== '' ? 
-                   <div className="error-msg">
-                               <span><CgDanger /></span>{error}
-                   </div>
-                     : ''
-                   }
     </>
   )
 }
