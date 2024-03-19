@@ -1,4 +1,4 @@
-import { auth } from "./auth";
+//import { auth } from "./auth";
 import { DEFAULT_LOGIN_REDIRECT, apiAuthPrefix, protectedRoutes, publicRoutes } from "./routes";
 
 export default auth(req => {
