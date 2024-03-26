@@ -7,11 +7,11 @@ export const publicRoutes = [
 ]
 
 /**
- * Array of protected routes
+ * Array of auth routes
  */
-export const protectedRoutes = [
+export const authRoutes = [
       "/auth/login",
-      "/auth/register"
+      "/auth/signup"
 ]
 
 /**
