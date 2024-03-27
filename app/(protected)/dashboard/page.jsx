@@ -1,8 +1,9 @@
-import { Toaster } from "react-hot-toast"
+import { auth } from "@/auth"
 const Dashboard = async() => {
+  const session = await auth();
   return (
     <div>
-            <Toaster />
+            {JSON.stringify(session)}
     </div>
   )
 }

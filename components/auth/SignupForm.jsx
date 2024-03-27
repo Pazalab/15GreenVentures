@@ -20,7 +20,8 @@ const SignupForm = () => {
                             toast.error(res.error);
                      }
                      if(res.success){
-                           toast.success(res.success)
+                           toast.success(res.success);
+                           reset();
                      }
              })
           })

@@ -18,7 +18,6 @@ export const loginUser = async (values) => {
               return { success: "Login Successful"};
        } catch (error) {
               if( error instanceof AuthError){
-                     console.log(error)
                      switch(error.type){
                              case "CredentialsSignin":
                                    return { error: 'Invalid credentials'}

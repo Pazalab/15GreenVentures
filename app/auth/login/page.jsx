@@ -2,9 +2,9 @@ import styles from "./page.module.css"
 import Link from "next/link"
 import Image from "next/image"
 import { dm_sans } from "@/app/layout"
-import { FcGoogle } from "react-icons/fc";
 import LoginForm from "../../../components/auth/LoginForm";
-
+import { signIn } from "next-auth/react";
+import GoogleButton from "@/components/auth/GoogleButton";
 const Login = () => {
   return (
     <div className={styles.login_wrapper}>
@@ -22,10 +22,7 @@ const Login = () => {
                                   </div>
                                    <div className="extra-form-content">
                                               <span className="line"></span>
-                                              <Link href='/api/auth/signin' className="extra-btn" >
-                                                         <span><FcGoogle /></span>
-                                                         <p>Continue with Google</p>
-                                              </Link>
+                                              <GoogleButton />
 
                                               <p className="redirect">Don&apos;t  have an account? <Link href={'/auth/signup'}>Sign Up</Link></p>
                                    </div>

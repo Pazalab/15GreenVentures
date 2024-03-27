@@ -1,5 +1,5 @@
 .main{
-     background: #e9fef7eb;
+     background: #f4fffceb;
      background-position: center;
      background-size: cover;
      height: 100vh;
@@ -49,7 +49,7 @@ header .logo{
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #e9fef7eb;;
+      background-color: #f4fffceb;
 }
 
 .hero_section .hero_texts{

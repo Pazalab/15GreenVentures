@@ -19,11 +19,11 @@ const usersSchema = new mongoose.Schema({
       },
       role: {
            type: String,
-            required: true
-      },
-      profilePic: {
-           public_id: { type: String, default: 'null'},
-            url: { type: String, default: 'null'}
+            required: true,
+            default: "Investor"
+       },
+      image: {
+              type: String,
       },
      verified: {
           type: Boolean,

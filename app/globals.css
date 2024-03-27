@@ -167,12 +167,15 @@ img{
        justify-content: center;
        border: 1px solid rgb(214, 231, 225);
        padding: 15px;
+       font-family: "Albert Sans";
        border-radius: 6px;
        -webkit-border-radius: 6px;
        -moz-border-radius: 6px;
        -ms-border-radius: 6px;
        -o-border-radius: 6px;
        cursor: pointer;
+       background: transparent;
+       width: 100%;
 }
 .extra-form-content .extra-btn span{
      display: flex;
