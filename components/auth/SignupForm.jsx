@@ -7,6 +7,7 @@ import { registerUser } from "@/actions/register";
 import toast, { Toaster } from "react-hot-toast"
 import { useTransition } from "react";
 import Loader from "../Loader";
+import { navigateToLogin } from "@/actions/redirects";
 const SignupForm = () => {
     const [eyeSwitch, setEyeSwitch] = useState(false);
     const [eyeSwitch2, setEyeSwitch2] = useState(false);
@@ -22,6 +23,9 @@ const SignupForm = () => {
                      if(res.success){
                            toast.success(res.success);
                            reset();
+                           setTimeout(()=> {
+                               navigateToLogin();
+                           }, 2000)
                      }
              })
           })

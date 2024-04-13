@@ -3,7 +3,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { dm_sans } from "@/app/layout"
 import LoginForm from "../../../components/auth/LoginForm";
-import { signIn } from "next-auth/react";
 import GoogleButton from "@/components/auth/GoogleButton";
 const Login = () => {
   return (

@@ -1,6 +1,5 @@
 "use server"
 
-import dbConnect from "@/lib/dbConn";
 import { getUserByEmail } from "@/lib/user";
 import User from "@/models/UserModel";
 

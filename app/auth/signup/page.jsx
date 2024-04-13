@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { dm_sans } from "@/app/layout"
 import SignupForm from "../../../components/auth/SignupForm"
-import { FcGoogle } from "react-icons/fc";
+import GoogleButton from "@/components/auth/GoogleButton"
 const Signup = () => {
   return (
     <div className={styles.signup_wrapper} >
@@ -21,10 +21,7 @@ const Signup = () => {
                                   </div>
                                    <div className="extra-form-content">
                                               <span className="line"></span>
-                                              <div className="extra-btn">
-                                                         <span><FcGoogle /></span>
-                                                         <p>Continue with Google</p>
-                                              </div>
+                                              <GoogleButton />
 
                                               <p className="redirect">Already have an account? <Link href={'/auth/login'}>Login</Link></p>
                                    </div>

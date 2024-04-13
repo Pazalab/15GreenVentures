@@ -2,9 +2,11 @@
 import { useState, useTransition } from "react"
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useForm } from "react-hook-form";
-import { loginUser } from "@/actions/login";
 import toast, { Toaster } from "react-hot-toast";
 import Loader from "../Loader";
+import { signIn } from "next-auth/react";
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+
 const LoginForm = () => {
     const [eyeSwitch, setEyeSwitch] = useState(false);
     const { register, handleSubmit, formState: { errors}, reset} = useForm();
@@ -12,14 +14,17 @@ const LoginForm = () => {
 
     const login= async(data) => {
            startTransition(() => {
-                  loginUser(data).then(res => {
-                          if(res.error){
-                                  toast.error(res.error, { id: 'login-error'});
-                          }
-                          if(res.success){
-                                 toast.error(res.success, { id: 'login-message'});
-                          }
-                  })
+                 signIn("credentials",{
+                        ...data,
+                        callbackUrl: DEFAULT_LOGIN_REDIRECT
+                 }).then(res => {
+                         if(res.error){
+                                toast.error(res.error, { id: 'login-error'});
+                         }
+                         if(res.ok && !res.error){
+                                 toast.success("Logged in Successfully!")
+                         }
+                 })
            })
     }
   return (
