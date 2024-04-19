@@ -8,6 +8,7 @@
 
 :root{
      --main-color: rgba(8, 177, 98, 0.993);
+     --dark-green: rgb(29, 117, 94);
 }
 
 body{
@@ -54,11 +55,27 @@ img{
 }
 
 .logo{
-     position: relative;
-     width: 130px;
-     height: 80px;
-     display: flex;
-}
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+  }
+ .logo .logo_image{
+         width: 35px;
+         position: relative;
+         height: 35px;
+         display: flex;
+         margin-top: 5px;;
+  }
+ .logo h2{
+         font-size: 30px;
+         color: #222;
+         font-weight: 500;
+  }
+.logo h2 span{
+        font-size: 40px;
+        color: var(--main-color);
+  }
 
 
 .form-row{

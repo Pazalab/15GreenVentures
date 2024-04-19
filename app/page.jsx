@@ -9,8 +9,11 @@ export default function Home() {
               <header>
                           <div className='inner-row'>
                                     <div className={styles.header_content}>
-                                              <Link href={'/'} className={styles.logo}>
-                                                       <Image src={'/logo.png'}  sizes="100vw" fill style={{objectFit: 'contain'}} alt='' />
+                                              <Link href={'/'} className="logo">
+                                                       <div className="logo_image">
+                                                                <Image src={'/pot.png'}  sizes="100vw" fill style={{objectFit: 'contain'}} alt='' />
+                                                       </div>
+                                                       <h2 className={dm_sans.className}>Agulu<span>.</span></h2>
                                               </Link>
 
                                             <div className={styles.header_btns}>

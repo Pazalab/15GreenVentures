@@ -6,27 +6,33 @@ import toast, { Toaster } from "react-hot-toast";
 import Loader from "../Loader";
 import { signIn } from "next-auth/react";
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
     const [eyeSwitch, setEyeSwitch] = useState(false);
     const { register, handleSubmit, formState: { errors}, reset} = useForm();
-    const [ isPending, startTransition ] = useTransition();
+    const [ isLoading, setIsLoading ] = useState(false);
+    const router = useRouter();
 
     const login= async(data) => {
-           startTransition(() => {
-                 signIn("credentials",{
-                        ...data,
-                        callbackUrl: DEFAULT_LOGIN_REDIRECT
-                 }).then(res => {
-                         if(res.error){
-                                toast.error(res.error, { id: 'login-error'});
-                         }
-                         if(res.ok && !res.error){
-                                 toast.success("Logged in Successfully!")
-                         }
-                 })
+           setIsLoading(true);
+           signIn("credentials",{
+                ...data,
+                callbackUrl: DEFAULT_LOGIN_REDIRECT,
+                redirect: false
+           }).then(res => {
+                setIsLoading(false);
+                reset();
+                 if(res.error){
+                        toast.error(res.error, { id: 'login-error'});
+                 }
+                 if(res.ok && !res.error){
+                         toast.success("Logged in Successfully!", { id: 'login-success'})
+                         router.push(DEFAULT_LOGIN_REDIRECT)
+                 }
            })
     }
+
   return (
     <>
           <Toaster />
@@ -47,7 +53,7 @@ const LoginForm = () => {
                             <span className="error">{errors.password && errors.password.message}</span>                                      
                     </div>
                     <div className="form-btn">
-                              <button type="submit">Login{isPending ? <Loader /> : "" }</button>
+                              <button type="submit">Login{isLoading ? <Loader /> : "" }</button>
                     </div>
             </form>
     </>

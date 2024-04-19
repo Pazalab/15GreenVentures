@@ -15,12 +15,20 @@
     margin: 30px  auto;
 }
 .form_content h2{
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: 600;
 }
 .form_content p{
      font-size: 18px;
      margin-bottom: 20px;
      color: rgb(78, 78, 78);
+}
+.logo .logo_image{
+    width: 35px;
+    position: relative;
+    height: 35px;
+    display: flex;
+    margin-top: 5px;;
 }
 
 .login_image{

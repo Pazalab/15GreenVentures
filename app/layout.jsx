@@ -1,19 +1,23 @@
-import { DM_Sans } from "next/font/google";
-import { Albert_Sans } from "next/font/google";
+import { DM_Sans, Kumbh_Sans } from "next/font/google";
 import "./globals.css";
 
-const albert_sans = Albert_Sans({ subsets: ["latin"], weight: ['300', '400', '500', '600'] });
 export const dm_sans = DM_Sans({ subsets: ['latin'], weight: ['500', '600', '700']})
+export const khumb_sans = Kumbh_Sans({ subsets: ["latin"], weight: ['300', '400', '500', '600'] });
 
-export const metadata = {
-  title: "15 Green Ventures",
-  description: "Joining hands to take on the future.",
-};
+// export const metadata = {
+//   title: "Agulu",
+//   description: "Effective way to save and invest among like-minded individuals.",
+// };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-             <body className={albert_sans.className}>{children}</body>
+              <head>
+                       <title>Agulu</title>
+                       <meta  name="description" content="Effective way to save and invest among like-minded individuals."  />
+                       <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+              </head>
+             <body className={khumb_sans.className}>{children}</body>
     </html>
   );
 }

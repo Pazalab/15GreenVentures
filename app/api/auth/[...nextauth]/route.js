@@ -11,13 +11,16 @@ export const authOptions = {
                GoogleProvider({
                        clientId: process.env.GOOGLE_CLIENT_ID,
                        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+                       allowDangerousEmailAccountLinking: true,
                        profile(profile){
                             return {
                                     id: profile.sub,
                                     name: profile.name,
                                     email: profile.email,
                                     image: profile.picture,
-                                    role: profile.role ?? "Investor"
+                                    role: profile.role ?? "Investor",
+                                    verified: false,
+                                    username: profile.given_name,
                             }
                        }
                }),

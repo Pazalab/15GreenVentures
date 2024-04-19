@@ -1,32 +1,18 @@
 "use server"
 
-import { signIn } from "../auth";
+//import { signIn } from "..
 import { DEFAULT_LOGIN_REDIRECT } from "../routes";
 import { AuthError } from "next-auth";
 import { isRedirectError } from "next/dist/client/components/redirect";
-
+import { signIn } from "next-auth/react";
 
 export const loginUser = async (values) => {
        const { email, password } = values;
 
-       try {
-              await signIn("credentials", {
-                      email,
-                      password,
-                      redirectTo: DEFAULT_LOGIN_REDIRECT,
-              })
-              return { success: "Login Successful"};
-       } catch (error) {
-              if( error instanceof AuthError){
-                     switch(error.type){
-                             case "CredentialsSignin":
-                                   return { error: 'Invalid credentials'}
-                            default: 
-                                   return { error: "Something went wrong, Try again later"}
-                     }
-              }
-              if(isRedirectError){
-                      throw error;
-              }
-       }
+       await signIn("credentials", {
+              email,
+              password,
+              redirectTo: DEFAULT_LOGIN_REDIRECT,
+      })
+      return { success: "Login Successful"};
 }

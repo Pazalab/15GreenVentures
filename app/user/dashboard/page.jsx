@@ -1,14 +1,11 @@
-"use client"
-
 import { Toaster } from "react-hot-toast"
-import { signOut } from "next-auth/react"
-const Dashboard = () => {
+import DashboardBody from "./components/DashboardBody"
+
+export default function Dashboard(){
   return (
-    <div>
+    <>
             <Toaster />
-            <button onClick={() => signOut()}>Sign Out</button>
-    </div>
+            <DashboardBody />
+    </>
   )
 }
-
-export default Dashboard
