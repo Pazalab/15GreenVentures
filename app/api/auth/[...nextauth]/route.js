@@ -9,8 +9,8 @@ import clientPromise from "@/lib/db";
 export const authOptions = {
         providers: [
                GoogleProvider({
-                       clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ,
-                       clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
+                       clientId: process.env.GOOGLE_CLIENT_ID,
+                       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
                        allowDangerousEmailAccountLinking: true,
                        profile(profile){
                             return {
@@ -58,7 +58,7 @@ export const authOptions = {
                        return session
                }
         },
-        secret: process.env.NEXT_PUBLIC__SECRET,
+        secret: process.env.NODE_ENV === 'development' ? process.env.NEXTAUTH_SECRET : process.env.NEXT_PUBLIC_SECRET,
         adapter: MongoDBAdapter(clientPromise),
         session: {
                strategy: "jwt",
