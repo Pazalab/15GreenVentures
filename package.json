@@ -1,5 +1,5 @@
 {
-  "name": "15greenventures",
+  "name": "Agulu",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,7 +19,8 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.0",
     "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.0.1"
+    "react-icons": "^5.0.1",
+    "recharts": "^2.12.5"
   },
   "devDependencies": {
     "eslint": "^8",
