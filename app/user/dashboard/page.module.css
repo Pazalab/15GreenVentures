@@ -434,3 +434,127 @@
 .row_moja:nth-child(3) span.icon{
       color: rgb(205, 49, 49);
 }
+
+.recent_transaction_section{
+      background: white;
+      box-shadow: var(--box-shadow);
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+      padding: 30px 20px;
+}
+
+.recent_transaction_header{
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      margin-bottom: 20px;
+      align-items: center;
+}
+
+.recent_transaction_header h3{
+        font-size: 24px;
+        font-weight: 500;
+}
+.recent_transaction_header a{
+      font-size: 14px;
+      display: flex;
+      font-weight: 600;
+    position: relative;
+    height: max-content;
+    justify-content: center;
+    padding-bottom: 5px;
+    color: var(--dark-green);
+}
+.recent_transaction_header a::after{
+      content: '';
+      width: 60%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      background: var(--dark-green);
+}
+
+.recent_transaction_table table{
+       width: 100%;
+       border-collapse: collapse;
+}
+
+.recent_transaction_table th{
+      text-align: left;
+      font-size: 16px;
+      color: gray;
+      font-weight: 400;
+      padding: 16px 0;
+      border-bottom: 1px solid rgb(232, 232, 232);
+}
+.recent_transaction_table tbody tr td{
+     border-bottom: 1px solid rgb(232, 232, 232);
+     padding: 16px 0;
+}
+.recent_transaction_table table .profile_image{
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        background: white;
+        box-shadow: var(--box-shadow);
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+}
+
+.transact_profile{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+}
+.transact_profile h3{
+       font-weight: 400;
+       font-size: 17px;
+       color: #555;
+}
+
+.recent_transaction_table td h3,
+.recent_transaction_table td h5{
+       font-size: 16px;
+       font-weight: 500;
+       color: #555;
+}
+.recent_transaction_table td h5 span{
+       font-size: 13px;
+       color: #555;
+}
+
+.recent_transaction_table .date h5{
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+}
+.recent_transaction_table .date p{
+      color: gray;
+      font-size: 13px;
+}
+
+.recent_transaction_table .transact_status{
+       padding: 10px 20px;
+       border-radius: 20px;
+       display: inline-block;
+       background: rgba(121, 222, 182, 0.3);
+       color: var(--main-color);
+       -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+       -ms-border-radius: 20px;
+       -o-border-radius: 20px;
+}
+.transact_status h6{
+        font-size: 14px;
+        font-weight: 400;
+}

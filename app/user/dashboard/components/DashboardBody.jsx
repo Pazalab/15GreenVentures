@@ -1,5 +1,6 @@
 import styles from "../page.module.css"
 import MainNavbar from "./MainNavbar";
+import RecentTransactions from "./RecentTransactions";
 import SummaryPart from "./SummaryPart";
 import Topbar from "./Topbar";
 
@@ -12,6 +13,7 @@ const DashboardBody = () => {
                                     <Topbar />
                                     <MainNavbar />
                                     <SummaryPart /> 
+                                    <RecentTransactions />
                          </div>
                </div>
                <div className={styles.right_column}></div>
