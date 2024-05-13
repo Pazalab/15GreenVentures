@@ -5,7 +5,13 @@ import Image from "next/image"
 import { dm_sans, khumb_sans } from "@/app/layout"
 import { CiSearch } from "react-icons/ci";
 import { usePathname } from "next/navigation";
+import { CgMenu } from "react-icons/cg";
+import { BsUiRadiosGrid } from "react-icons/bs";
+import MobileNavBar from "./MobileNavBar"
+import { useState } from "react"
+
 const Topbar = () => {
+    const [ mobileStatus, SetMobileStatus ] = useState(false)
     const path = usePathname();
     const realPath = path.slice(6);
 
@@ -28,6 +34,15 @@ const Topbar = () => {
                                       <span><CiSearch /></span>
                               </div>
                  </div>
+                 <div className={styles.mobile_triggers}>
+                              <span><CiSearch /></span>
+                              <span className={styles.mobile_wrapper}>
+                                        <span onClick={() => SetMobileStatus(!mobileStatus)}><BsUiRadiosGrid /></span>
+                                        { mobileStatus ? <MobileNavBar /> : ""}
+                              </span>
+                              <span><CgMenu /></span>
+                 </div>
+
        </div>         
   )
 }

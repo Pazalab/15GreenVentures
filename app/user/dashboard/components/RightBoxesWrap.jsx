@@ -2,6 +2,7 @@ import styles from "../page.module.css"
 import { IoStopCircle } from "react-icons/io5";
 import { BsPiggyBank } from "react-icons/bs";
 import { GiTakeMyMoney } from "react-icons/gi";
+
 const RightBoxesWrap = () => {
   return (
     <div className={styles.standing_wrap}>
@@ -15,7 +16,7 @@ const RightBoxesWrap = () => {
              <div className={styles.row_moja}>
                        <div className={styles.row_texts}>
                                  <p>Cash at Nabo MMF</p>
-                                 <h3><span>Ksh.</span>14,500</h3>
+                                 <h3><span>Ksh.</span>64,500</h3>
                        </div>
                        <span className={styles.icon}><BsPiggyBank /></span>
              </div>
