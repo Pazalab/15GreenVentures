@@ -1,10 +1,10 @@
+"use client"
 import Link from "next/link"
-import styles from "../page.module.css"
+import styles from "../user.module.css"
 import { usePathname } from "next/navigation";
 const MobileNavBar = () => {
     const path = usePathname();
     const realPath = path.slice(6);
-    
   return (
     <div className={styles.mobile_navbar}>
                <ul>

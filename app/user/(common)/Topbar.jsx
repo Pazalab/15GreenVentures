@@ -1,5 +1,5 @@
 "use client"
-import styles from "../page.module.css"
+import styles from "../user.module.css"
 import Link from "next/link"
 import Image from "next/image"
 import { dm_sans, khumb_sans } from "@/app/layout"
@@ -8,13 +8,15 @@ import { usePathname } from "next/navigation";
 import { CgMenu } from "react-icons/cg";
 import { BsUiRadiosGrid } from "react-icons/bs";
 import MobileNavBar from "./MobileNavBar"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { greenBarContext } from "../dashboard/components/greenbar"
 
 const Topbar = () => {
     const [ mobileStatus, SetMobileStatus ] = useState(false)
     const path = usePathname();
     const realPath = path.slice(6);
 
+    const [greenbar, setGreenBar] = useContext(greenBarContext)
   return (
     <div className={styles.topbar}>
                 <Link href={'/'} className="logo">
@@ -25,9 +27,9 @@ const Topbar = () => {
                 </Link>
                  <div  className={styles.topbar_nav}>
                              <ul>
-                                        <li><Link href={'/'} className={realPath === 'dashboard' ? styles.active : ''}>Home</Link></li>
-                                        <li><Link href={'/'} className={realPath === 'settings' ? styles.active : ''}>Settings</Link></li>
-                                        <li><Link href={'/'} className={realPath === 'help' ? styles.active : ''} >Help</Link></li>            
+                                        <li><Link href={'/user/dashboard'} className={realPath === 'dashboard' ? styles.active : ''}>Home</Link></li>
+                                        <li><Link href={'/user/settings'} className={realPath === 'settings' ? styles.active : ''}>Settings</Link></li>
+                                        <li><Link href={'/help'} className={realPath === 'help' ? styles.active : ''} >Help</Link></li>            
                              </ul>
                               <div className={styles.searchbar}>
                                       <input type="text"  className={khumb_sans.className} placeholder="Search reports"/>
@@ -37,10 +39,10 @@ const Topbar = () => {
                  <div className={styles.mobile_triggers}>
                               <span><CiSearch /></span>
                               <span className={styles.mobile_wrapper}>
-                                        <span onClick={() => SetMobileStatus(!mobileStatus)}><BsUiRadiosGrid /></span>
+                                        <span  onClick={() => SetMobileStatus(!mobileStatus)}><BsUiRadiosGrid /></span>
                                         { mobileStatus ? <MobileNavBar /> : ""}
                               </span>
-                              <span><CgMenu /></span>
+                              <span onClick={() => setGreenBar(true)}><CgMenu /></span>
                  </div>
 
        </div>         
