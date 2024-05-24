@@ -1,7 +1,13 @@
+"use client"
+import ProfileBody from "./components/ProfileBody"
+import SettingsHeader from "./components/SettingsHeader"
 
 const Settings = () => {
   return (
-    <div>Settings page</div>
+    <div>
+            <SettingsHeader />
+            <ProfileBody /> 
+    </div>
   )
 }
 

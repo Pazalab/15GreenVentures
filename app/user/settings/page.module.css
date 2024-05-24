@@ -1,0 +1,203 @@
+.settings_header{
+    margin: 20px 0;
+}
+.settings_header h2{
+     font-size: 28px;
+     margin-bottom: 10px;
+}
+.settings_switch_bars{
+    border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+.settings_switch_bars ul{
+     display: flex;
+     gap: 10px;
+}
+.settings_switch_bars ul li{
+     padding: 10px;
+     position: relative;
+     cursor: pointer;
+}
+.settings_switch_bars ul li::after{
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      background: var(--dark-green);
+      left: 0;
+      border-radius: 10px;
+      bottom: 0;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      transition: all 0.8s ease;
+      -webkit-transition: all 0.8s ease;
+      -moz-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+      -o-transition: all 0.8s ease;
+}
+.settings_switch_bars ul li.active::after,
+.settings_switch_bars ul li:hover::after{
+     width: 100%;
+}
+
+
+.profile_header{
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+.profile_header h3{
+    font-size: 18px;
+     font-weight: 600;
+}
+.profile_header p{
+    font-size: 15px;
+    color: rgb(86, 86, 86);
+}
+
+
+.form_content{
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+.form_content .input_row{
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    padding: 20px 10px;
+    align-items: center;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+.input_row label{
+      font-weight: 500;
+      font-size: 16px;
+}
+.input_row input{
+     padding-left: 15px;
+     height: 50px;
+     border-radius: 5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
+     outline: none;
+     border: 1px solid rgba(185, 185, 185, 0.212);
+     background: rgba(254, 254, 254, 0.43);
+}
+.input_row textarea{
+    padding: 15px;
+    height: 150px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(185, 185, 185, 0.212);
+    background: rgba(254, 254, 254, 0.43);
+}
+.input_row input::placeholder,
+.input_row textarea::placeholder{
+     color: rgb(156, 156, 156);
+}
+.right_image_col{
+       display: flex;
+       gap: 30px;;
+       align-items: center;
+}
+.right_image_col .image_box{
+      width: 65px;
+      height: 65px;
+      position: relative;
+      border: 1px solid gainsboro;
+      border-radius: 65px;
+      -webkit-border-radius: 65px;
+      -moz-border-radius: 65px;
+      -ms-border-radius: 65px;
+      -o-border-radius: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+}
+.input_row .left_col p{
+     font-size: 15px;
+     color: rgb(86, 86, 86);
+     width: 90%;
+     margin-top: 5px;
+}
+.picture_btns{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.picture_btns .upload_btn{
+    cursor: pointer;
+}
+
+.upload_btn input[type='file']{
+      position: absolute;
+      width: 90px;
+      height: 35px;
+      opacity: 0;
+      font-size: 0;
+      cursor: pointer;
+}
+
+.picture_btns p{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+.picture_btns .upload_btn p span{
+       color: var(--dark-green)
+}
+.picture_btns .upload_btn p:hover{
+      font-weight: 500 !important;
+}
+.picture_btns p:hover{
+     font-weight: 500;
+}
+.picture_btns p span{
+    display: flex;
+    font-size: 20px;
+    color: red;
+}
+
+.form_btn{
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+.form_btn button{
+       width: 100px;
+       height: 45px;
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       border: none;
+       background: var(--dark-green);
+       color: white;
+       font-weight: 500;
+       border-radius: 6px;
+       -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+       -ms-border-radius: 6px;
+       -o-border-radius: 6px;
+}
+
+
+
+@media(max-width: 768px){
+        .form_content .input_row{
+                grid-template-columns: 1fr;
+                gap: 10px;
+        }
+    
+}
