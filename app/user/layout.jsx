@@ -11,8 +11,7 @@ import { useState } from "react";
 export default function DashboardLayout({ children }) {
   const [greenbar, setGreenBar ] = useState(false)
     return (
-      <html lang="en">
-               <body>
+      <section>
                         <div className={styles.dashboard_section}>
                                <div className={styles.left_column}>
                                      <div className={styles.column_inner}>
@@ -23,14 +22,12 @@ export default function DashboardLayout({ children }) {
                                               { children}
                                      </div>
                                </div>
-
                                <div className={styles.right_column}>
                                              <ProfileHead /> 
                                              <NameCard /> 
                                              <CreditSummary />
                                </div>
                         </div>
-               </body>
-      </html>
+        </section>
     );
   }

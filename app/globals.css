@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 *{
      margin: 0;
@@ -9,6 +9,7 @@
 :root{
      --main-color: rgba(8, 177, 98, 0.993);
      --dark-green: rgb(46, 116, 97);
+     --green-color: rgb(6, 91, 68);
      --dark-yellow: rgb(255, 209, 122);
      --box-shadow: 0px 0px 10px -4px rgb(231, 231, 231);
 }
@@ -35,7 +36,10 @@ img{
       width: 1200px;
       margin: auto;
 }
-
+.inner-row-2{
+       width: 90%;
+       margin: auto;
+}
 
 /* Chrome, safari */
 *::-webkit-scrollbar {
@@ -73,6 +77,9 @@ img{
          font-size: 30px;
          color: #222;
          font-weight: 500;
+  }
+  .logo.green h2{
+       color: rgb(236, 236, 236);
   }
 .logo h2 span{
         font-size: 40px;
@@ -266,8 +273,19 @@ img{
       border-right: 3px solid transparent;
       box-sizing: border-box;
       animation: rotation 1s linear infinite;
-    }
+}
     
+.save-loader {
+      width: 15px;
+      height: 15px;
+      border: 2px dotted #fbfbfb;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      animation: rotation 2s linear infinite;
+ }
+
     @keyframes rotation {
       0% {
         transform: rotate(0deg);
@@ -276,6 +294,78 @@ img{
         transform: rotate(360deg);
       }
     } 
+.data-loader {
+      width: 25px;
+      height: 25px;
+      border: 2px solid var(--dark-green);
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+}
+
+/* Notification Bar */
+.notification-bar{
+      position: fixed;
+      bottom: 40px;
+      z-index: 999;
+      padding: 20px;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      box-shadow: 0px 0px 2px -1px rgba(156, 156, 156, 0.734);
+      transform: translateX(-220%);
+      -webkit-transform: translateX(-220%);
+      -moz-transform: translateX(-220%);
+      -ms-transform: translateX(-220%);
+      -o-transform: translateX(-220%);
+      transition: all 0.8s ease;
+      -webkit-transition: all 0.8s ease;
+      -moz-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+      -o-transition: all 0.8s ease;
+}
+.notification-bar.active.success,
+.notification-bar.active.error{
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+}
+.notification-bar.success{
+      background:rgb(222, 255, 240);
+}
+.notification-bar.error{
+      background: rgb(255, 218, 228);
+}
+.notification-bar p{
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+}
+.notification-bar.success p{
+      color: var(--main-color);
+}
+.notification-bar.error p{
+      color: red;
+}
+.notification-bar p span{
+      display: flex;
+      margin-top: -2px;
+}
+
+
+
+
+
+
+
+
 
 @media(max-width: 1250px){
       .inner-row{

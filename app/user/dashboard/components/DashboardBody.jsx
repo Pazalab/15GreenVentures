@@ -1,8 +1,6 @@
-"use client"
 import MainNavbar from "./MainNavbar";
 import RecentTransactions from "./RecentTransactions";
 import SummaryPart from "./SummaryPart";
-
 
 const DashboardBody = () => {
   return (

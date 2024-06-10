@@ -1,0 +1,132 @@
+.dashboard_strip{
+      background: var(--green-color);
+      height: 300px;
+      padding: 50px 0;
+}
+
+.strip_content{
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     align-items: center;
+}
+.dashboard_col h3{
+      font-size: 25px;
+      color: gainsboro;
+      font-weight: 400;
+}
+.dashboard_col h2{
+       font-size: 40px;
+       color: rgb(231, 231, 231);
+}
+.dashboard_col a{
+      display: flex;
+      width: 180px;
+      height: 45px;
+      background-color: var(--dark-yellow);
+      color: whitesmoke;
+      border-radius: 45px;
+      -webkit-border-radius: 45px;
+      -moz-border-radius: 45px;
+      -ms-border-radius: 45px;
+      -o-border-radius: 45px;
+      align-items: center;
+      padding-bottom: 1px;
+      justify-content: center;
+      font-size: 15px;
+}
+.dashboard_col a span{
+    display: flex;
+}
+
+.dashboard_highlight{
+       margin-top:  -120px;
+}
+.highlight_content{
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       gap: 30px;
+}
+.highlight_box{
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0px 0px 3px -1px rgb(206, 212, 210);
+}
+.highlight_box .box_icon{
+       width: 60px;
+       height: 60px;
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+       -ms-border-radius: 50%;
+       -o-border-radius: 50%;
+       margin-bottom: 10px;
+}
+.highlight_box:nth-child(1) .box_icon{
+    background: rgba(204, 251, 235, 0.55);
+}
+.highlight_box:nth-child(2) .box_icon{
+    background: rgba(251, 204, 222, 0.55);
+}
+.highlight_box:nth-child(3) .box_icon{
+    background: rgba(251, 248, 204, 0.55);
+}
+.highlight_box:nth-child(4) .box_icon{
+    background: rgba(235, 204, 251, 0.55);
+}
+.highlight_box .box_icon .ico{
+       width: 26px;
+       height: 26px;
+       position: relative;
+}
+.highlight_box h4{
+      font-weight: 500;
+      color: rgb(105, 105, 105);
+      font-size: 16px;
+}
+.highlight_box h3{
+     font-size: 27px;
+     font-weight: 500;
+     color: rgb(60, 60, 60);
+}
+.highlight_box h3 span{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.dashboard_graph_strip{
+    margin-top: 20px;
+}
+.graph_strip_content{
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+}
+
+.graph_strip_content .graph_strip_col{
+     padding: 25px;
+     border-radius: 20px;
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+     -ms-border-radius: 20px;
+     -o-border-radius: 20px;
+}
+
+.graph_strip_content .upcoming_col{
+     box-shadow: 0px 0px 3px -1px rgb(219, 219, 219);
+     padding: 25px;
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+}

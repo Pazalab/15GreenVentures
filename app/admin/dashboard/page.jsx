@@ -1,13 +1,9 @@
-"use client"
-
-import { Toaster } from "react-hot-toast"
-const { signOut } = require("next-auth/react")
+import DashboardBody from "./components/DashboardBody"
 
 const AdminPage = () => {
   return (
     <>
-          <Toaster />
-          <div onClick={() => signOut()}>AdminPage Dashboard</div>
+          <DashboardBody />
     </>
     
   )

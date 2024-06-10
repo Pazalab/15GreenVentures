@@ -17,7 +17,9 @@ export default function RootLayout({ children }) {
                        <meta  name="description" content="Effective way to save and invest among like-minded individuals."  />
                        <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
               </head>
-             <body className={khumb_sans.className}>{children}</body>
+             <body className={khumb_sans.className}>
+                        {children}
+             </body>
     </html>
   );
 }

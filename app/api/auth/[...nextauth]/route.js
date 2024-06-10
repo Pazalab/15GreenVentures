@@ -21,6 +21,9 @@ export const authOptions = {
                                     role: profile.role ?? "Investor",
                                     verified: false,
                                     username: profile.given_name,
+                                   //  country: "",
+                                   //  bio: "",
+                                   //  phone: ""
                             }
                        }
                }),
@@ -50,11 +53,13 @@ export const authOptions = {
                async jwt({ token, user, trigger, session }){
                        if(user){
                                 token.role = user.role
+                                token.id = user._id
                        }
                        return token;
                },
                async session({ session, token}){
                        session.user.role = token.role
+                       session.user.user_id = token.id
                        return session
                }
         },

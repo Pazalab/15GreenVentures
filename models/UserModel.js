@@ -28,6 +28,15 @@ const usersSchema = new mongoose.Schema({
      verified: {
           type: Boolean,
           default: false
+      },
+      country: {
+             type: String,
+      },
+      bio: {
+             type: String,
+      },
+      phone: {
+              type: String,
       }
 }, { timestamps: true});
 

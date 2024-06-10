@@ -1,0 +1,93 @@
+.topbar{
+     background: var(--green-color);
+     padding: 15px 0;
+     border-bottom: 1px solid rgba(127, 156, 149, 0.403);
+}
+.topbar_inner{
+    width: 90%;
+    margin: auto;
+}
+.topbar_content{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.topbar_content .logo h2{
+     color: whitesmoke !important;
+}
+.topbar_content .topbar_nav ul{
+       display: flex;
+       gap: 40px;
+       align-items: center;
+}
+.topbar_content ul li a{
+    color: whitesmoke;
+    display: flex;
+    gap: 5px;;
+    font-size: 16px;
+}
+.topbar_content ul li a span{
+    display: flex;
+    margin-top: 2px;
+}
+.topbar_content .right_nav{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+.topbar_content .right_nav .box{
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(98, 131, 118, 0.333);
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+}
+.right_nav .box span{
+    display: flex;
+    color: whitesmoke;
+}
+
+.right_nav .profile{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+    padding-right: 10px;
+    height: 40px;
+    background: rgba(98, 131, 118, 0.333);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.right_nav .profile .profile_image{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      overflow: hidden;
+      margin: 3px;
+}
+.right_nav .profile h2{
+     font-size: 15px;
+     gap: 5px;
+     display: flex;
+     font-weight: 400;
+     color: whitesmoke;
+     align-items: center;
+}
+.right_nav .profile h2 span{
+     display: flex;
+     font-size: 18px;
+}
