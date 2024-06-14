@@ -359,11 +359,23 @@ img{
       margin-top: -2px;
 }
 
+.recharts-default-tooltip{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid rgba(220, 220, 220, 0.396) !important;
+}
 
+.recharts-default-tooltip .recharts-tooltip-label{
+       font-size: 14px !important;
+       color: rgb(50, 50, 50);
+}
 
-
-
-
+ .recharts-tooltip-item {
+      font-size: 13px !important;
+}
 
 
 

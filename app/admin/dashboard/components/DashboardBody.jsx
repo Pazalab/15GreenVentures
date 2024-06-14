@@ -4,6 +4,9 @@ import { FiPlus } from "react-icons/fi";
 import { dm_sans } from "@/app/layout";
 import Image from "next/image";
 import DashboardGraphStrip from "./DashboardGraphStrip";
+import TransactionStrip from "./TransactionStrip";
+
+
 const DashboardBody = () => {
   return (
     <div className={styles.dashboard_body}>
@@ -64,7 +67,10 @@ const DashboardBody = () => {
                          </div>
               </div>
 
-              <DashboardGraphStrip />
+               <div className={styles.dashboard_body_wrapper}>
+                        <DashboardGraphStrip />
+                         <TransactionStrip />
+               </div>
     </div>
   )
 }
