@@ -1,0 +1,96 @@
+.dashboard_strip{
+    background: var(--green-color);
+    height: 200px;
+    padding: 50px 0;
+}
+
+.strip_content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.dashboard_col h3{
+     font-size: 25px;
+     color: gainsboro;
+     font-weight: 400;
+}
+.dashboard_col h2{
+      font-size: 40px;
+      color: rgb(231, 231, 231);
+}
+.dashboard_col a{
+     display: flex;
+     width: 180px;
+     height: 45px;
+     background-color: var(--dark-yellow);
+     color: whitesmoke;
+     border-radius: 45px;
+     -webkit-border-radius: 45px;
+     -moz-border-radius: 45px;
+     -ms-border-radius: 45px;
+     -o-border-radius: 45px;
+     align-items: center;
+     padding-bottom: 1px;
+     justify-content: center;
+     font-size: 15px;
+}
+.dashboard_col a span{
+   display: flex;
+}
+
+.members_wrapper_table table{
+    width: 100%;
+    background: white;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-top: -50px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.members_wrapper_table table th{
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+    background: whitesmoke;
+}
+.members_wrapper_table table td{
+      padding: 8px 15px;
+      border-collapse: collapse;
+      border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+.user_details{
+      display: flex;
+      text-align: left;
+      gap: 10px;
+      align-items: center;
+}
+.user_details  .image_box{
+     width: 45px;
+     flex-shrink: 0;
+     height: 45px;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     overflow: hidden;
+     position: relative;
+}
+.details_box h3{
+     font-size: 17px;
+     font-weight: 600;
+}
+
+.details_box p{
+     font-size: 15px;
+     color: rgb(50, 50, 50);
+}

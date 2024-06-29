@@ -1,7 +1,10 @@
+import MembersBody from "./components/MembersBody"
 
 const MemberPage = () => {
   return (
-    <div>MemberPage</div>
+    <>
+           <MembersBody />
+    </>
   )
 }
 

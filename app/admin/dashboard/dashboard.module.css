@@ -336,3 +336,26 @@
            grid-template-columns: 1fr;
     }
 }
+
+@media(max-width: 768px){
+    .dashboard_col h3{
+          font-size: 20px;
+    }
+    .dashboard_col h2{
+          font-size: 30px;
+    }
+      .highlight_content{
+            grid-template-columns: 1fr;
+      }
+      .strip_content{
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+      }
+      .dashboard_highlight{
+           margin-top: -80px;
+      }
+      .recent_transaction_table table{
+           width: 600px;
+      }
+}

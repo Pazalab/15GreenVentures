@@ -53,7 +53,7 @@ export const authOptions = {
                async jwt({ token, user, trigger, session }){
                        if(user){
                                 token.role = user.role
-                                token.id = user._id
+                                token.id = user._id || user.id
                        }
                        return token;
                },

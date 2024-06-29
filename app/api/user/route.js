@@ -9,7 +9,7 @@ export async function POST(request) {
 
   export async function GET(){
          const session = await getServerSession(authOptions);
-         
+
          const user = await getUserById(session.user.user_id);
          
          return NextResponse.json(user)

@@ -15,6 +15,7 @@ const ProfileHead = () => {
       useEffect(() => {
             if(data){
                   setProfile(data)
+                  console.log(data)
                   //localStorage.setItem("Profile", JSON.stringify(data))
                   setUserProfile(data)
             }
